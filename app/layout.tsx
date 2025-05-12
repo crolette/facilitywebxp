@@ -1,8 +1,17 @@
 import type { Metadata } from 'next';
-import { Newsreader } from 'next/font/google';
+import { Newsreader, Lexend } from 'next/font/google';
 import './globals.css';
+import AnalyticsScript from './components/AnalyticsScript';
 
-const newsReader = Newsreader();
+const newsReader = Newsreader({
+	subsets: ['latin'],
+	weight: ['200', '300', '400'],
+	variable: '--font-newsreader'
+});
+const lexend = Lexend({
+	subsets: ['latin'],
+	variable: '--font-lexend'
+});
 
 export const metadata: Metadata = {
 	title: 'Facility Web Experience',
@@ -17,8 +26,13 @@ export default function RootLayout({
 	return (
 		<html
 			lang='en'
-			className={newsReader.className}>
-			<head></head>
+			className={` ${newsReader.className} ${lexend.className}`}>
+			<head>
+				<script
+					async
+					src='https://www.googletagmanager.com/gtag/js?id=G-DBX3VB3DGJ'></script>
+				<AnalyticsScript />
+			</head>
 			<body className={`antialiased`}>{children}</body>
 		</html>
 	);

@@ -8,7 +8,7 @@ const AnalyticsScript = () => (
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
 
-        gtag('config', 'G-842KRLZR2R');
+        gtag('config', 'G-DBX3VB3DGJ');
       `
 		}}
 	/>

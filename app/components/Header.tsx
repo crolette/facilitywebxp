@@ -19,7 +19,9 @@ export default function Header({ lang }: { lang: Lang }) {
 			} text-foreground z-50 w-full mx-auto fixed top-0 `}>
 			<div className='px-2 container w-full flex items-center justify-between mx-auto relative'>
 				<div className='text-xl font-bold w-1/4'>
-					<Link href={`/${lang}`}>
+					<Link
+						href={`/${lang}`}
+						onClick={() => setShowMobileMenu(showMobileMenu ? false : true)}>
 						<img
 							src='/logo.png'
 							alt=''
@@ -29,7 +31,7 @@ export default function Header({ lang }: { lang: Lang }) {
 						/>
 					</Link>
 				</div>
-				<div className='flex flex-row gap-4 cursor-pointer'>
+				{/* <div className='flex flex-row gap-4 cursor-pointer'>
 					<Languages pageLang={lang} />
 					<button onClick={() => setShowMobileMenu(!showMobileMenu)}>
 						{!showMobileMenu ? (
@@ -41,7 +43,7 @@ export default function Header({ lang }: { lang: Lang }) {
 							<X size={40} />
 						)}
 					</button>
-				</div>
+				</div> */}
 			</div>
 			{showMobileMenu && (
 				<Menu

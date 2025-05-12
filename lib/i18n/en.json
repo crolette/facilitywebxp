@@ -2,9 +2,9 @@
 	"siteName": "Facility Web Experience",
 	"welcome": "Une expérience unique de conseil en Facility Management et de Développement Web pour les PME",
 
-	"companyTitle": "Facility Web Experience SPRL",
-	"companyAddress": "Rue sur le Hour 16A - Theux",
-	"companyVAT": "BE0123456789",
+	"companyTitle": "FWebxp SRL",
+	"companyAddress": "Rue sur le Hour 16 Bis - 4910 Theux - Belgique",
+	"companyVAT": "BE 1020.619.548",
 
 	"menuHome": "Home",
 	"menuFacility": "Facility Management",
@@ -12,5 +12,14 @@
 	"menuContact": "Contact",
 
 	"contactTitle": "Contact",
-	"contactDescription": "Description contact"
+	"contactDescription": "Description contact",
+	"contactUsTitle": "Contact us",
+	"contactUsText": "Want to contact us ? Just send us an e-mail.",
+
+	"knowMore": "Tell me more",
+
+	"facilitySectionLine1": "En tant que responsable de PME, votre objectif est votre compétitivité ! Pour assurer cette compétitivité, vous avez besoin d’infrastructures adaptées, améliorant vos conditions de travail et celles de votre personnel tout en optimisant leurs coûts.",
+	"facilitySectionTitle1": "Le Facility Management est la solution !",
+	"facilitySectionLine2": "Le Facility Management est cette discipline qui a pour mission d'élaborer et de mettre en œuvre des moyens, des services et des procédures permettant à l'ensemble des collaborateurs d'une entreprise d'assumer leurs responsabilités professionnelles dans un environnement efficace, flexible et aussi peu contraignant que possible tout en optimalisant les coûts de fonctionnement.",
+	"facilitySectionLine3": "Notre consultance en Facility management implique l'analyse, la planification et la supervision des services et des infrastructures de votre entreprise afin d'améliorer son efficacité opérationnelle. Nous pouvons gérer le suivi des opérations via nos solutions adaptées mais nous offrons surtout une vision stratégique visant à améliorer la gestion globale des services et des infrastructures de votre entreprise, tout en réduisant les coûts et en augmentant votre efficacité."
 }

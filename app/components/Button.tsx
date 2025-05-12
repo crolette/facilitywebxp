@@ -9,8 +9,8 @@ export default function Button({
 	value: string;
 }) {
 	const classes = inverted
-		? ' border-2 border-accent text-foreground dark:text-accent hover:bg-accent hover:border-accent hover:text-background '
-		: ' bg-accent border-2 border-accent text-background dark:text-background hover:bg-background hover:border-accent hover:text-foreground ';
+		? ' bg-accent border-2 border-accent text-foreground hover:bg-secondary hover:border-accent hover:text-accent '
+		: ' bg-secondary border-2 border-accent text-accent hover:bg-accent hover:border-secondary hover:text-secondary ';
 	return (
 		<button
 			className={`py-2 px-6 uppercase text-sm tracking-tight font-semibold cursor-pointer h-fit w-fit ${classes} ${classname}`}

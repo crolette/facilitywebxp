@@ -32,7 +32,7 @@ export default function Languages({ pageLang }: { pageLang: string }) {
 			<select
 				value={selectedLang}
 				onChange={handleChange}
-				className='text-foreground'>
+				className=''>
 				{languages.map((lang) => (
 					<option
 						key={lang}

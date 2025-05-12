@@ -12,8 +12,6 @@
 	--color-secondary: var(--secondary);
 	--color-foreground: var(--foreground);
 	--color-accent: var(--accent);
-	--font-sans: var(--font-geist-sans);
-	--font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -28,7 +26,8 @@
 body {
 	background: var(--background);
 	color: var(--foreground);
-	font-family: Newsreader, Helvetica, sans-serif;
+	font-family: Lexend, sans-serif;
+	font-weight: 200;
 }
 
 .wrapper {
@@ -39,15 +38,24 @@ body {
 
 main {
 	flex: 1;
-	@apply text-lg;
+	@apply text-xl xl:text-lg;
 }
 
 footer {
 	box-shadow: 0 0 10px var(--foreground);
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: NewsReader, serif;
+}
+
 h1 {
-	@apply text-9xl;
+	@apply text-5xl md:text-9xl;
 }
 
 h2 {
