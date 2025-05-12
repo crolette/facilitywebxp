@@ -26,7 +26,7 @@ export default async function HomePage({
 						<p className='mt-2'>Scroll Down</p>
 					</div>
 				</div>
-				<div className='sticky top-0 h-screen flex flex-col items-center justify-center bg-gradient-to-b from-blue-200 to-indigo-100 text-black'>
+				<div className='sticky top-0 h-screen flex flex-col items-center justify-center bg-background'>
 					<h2 className='text-4xl font-bold'>Contact</h2>
 				</div>
 			</div>

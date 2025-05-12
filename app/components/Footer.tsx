@@ -5,7 +5,14 @@ export default function Footer({ lang }: { lang: Lang }) {
 
 	return (
 		<footer>
-			<div className='mx-auto py-10 space-y-10'>
+			<div className='space-y-2.5'>
+				<div className='h-0.5 bg-accent w-full'></div>
+				<div className='h-1 bg-accent w-full'></div>
+				<div className='h-1.5 bg-accent w-full'></div>
+				<div className='h-2 bg-accent w-full'></div>
+				<div className='h-2.5 bg-accent w-full'></div>
+			</div>
+			<div className='mx-auto py-10 space-y-10 bg-accent text-background'>
 				<div className='grid grid-cols-1 sm:grid-cols-3 gap-10 md:gap-20 md:flex-row px-10'>
 					<div className='w-full space-y-2'>
 						<h4 className='font-semibold border-b-accent border-b-2'>Menu</h4>
@@ -25,9 +32,9 @@ export default function Footer({ lang }: { lang: Lang }) {
 						</ul>
 					</div>
 					<img
-						src='/logo.png'
+						src='/logo_white.png'
 						alt=''
-						className='w-40 h-auto drop-shadow-[0_0_5px_rgba(255,255,255,1)] mx-auto'
+						className='w-40 h-auto mx-auto'
 						width={80}
 						height={80}
 					/>
