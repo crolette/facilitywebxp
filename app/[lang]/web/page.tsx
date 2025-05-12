@@ -14,9 +14,18 @@ export default async function HomePage({
 	return (
 		<>
 			<div className='relative'>
-				<div className='sticky top-0 h-screen flex flex-col items-center justify-center bg-gradient-to-b from-purple-800 to-pink-800 text-white'>
-					<h1 className=''>Web Development</h1>
-					<p className='mt-2'>Scroll Down</p>
+				<div className='sticky top-0 h-screen flex flex-col items-center justify-center bg-accent text-secondary text-center'>
+					<div className='container space-y-10'>
+						<h1 className=''>Web Development</h1>
+						<p className=''>
+							La compétitivté de votre PME, passe aussi par votre présence en
+							ligne ! Pour assurer cette compétitivité, vous avez besoin de
+							visibilité !
+						</p>
+						<p className='text-3xl font-serif italic'>
+							Nous sommes la pour vous!
+						</p>
+					</div>
 				</div>
 			</div>
 		</>
