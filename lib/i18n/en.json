@@ -1,0 +1,16 @@
+{
+	"siteName": "Facility Web Experience",
+	"welcome": "Une expérience unique de conseil en Facility Management et de Développement Web pour les PME",
+
+	"companyTitle": "Facility Web Experience SPRL",
+	"companyAddress": "Rue sur le Hour 16A - Theux",
+	"companyVAT": "BE0123456789",
+
+	"menuHome": "Home",
+	"menuFacility": "Facility Management",
+	"menuWeb": "Web Development",
+	"menuContact": "Contact",
+
+	"contactTitle": "Contact",
+	"contactDescription": "Description contact"
+}
