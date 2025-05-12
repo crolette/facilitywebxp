@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { dictionaries, Lang } from '@/lib/dictionaries';
+import { Lang } from '@/lib/dictionaries';
 
 export default function Menu({
 	lang,

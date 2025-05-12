@@ -8,13 +8,13 @@
 
 	"menuHome": "Home",
 	"menuFacility": "Facility Management",
-	"menuWeb": "Web Development",
+	"menuWeb": "Développement Web",
 	"menuContact": "Contact",
 
 	"contactTitle": "Contact",
 	"contactDescription": "Description contact",
-	"contactUsTitle": "Contact us",
-	"contactUsText": "Want to contact us ? Just send us an e-mail.",
+	"contactUsTitle": "Contactez-nous",
+	"contactUsText": "Intéressé ? Envoyez-nous un e-mail et nous vous répondrons dans les plus brefs délais.",
 
 	"knowMore": "Tell me more",
 

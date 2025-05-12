@@ -1,11 +1,9 @@
 'use client';
 
 import { Lang } from '@/lib/dictionaries';
-import { MenuIcon, X } from 'lucide-react';
 import Link from 'next/link';
 import { useState } from 'react';
 import Menu from './Menu';
-import Languages from './Languages';
 
 export default function Header({ lang }: { lang: Lang }) {
 	const [showMobileMenu, setShowMobileMenu] = useState(false);
@@ -19,9 +17,8 @@ export default function Header({ lang }: { lang: Lang }) {
 			} text-foreground z-50 w-full mx-auto fixed top-0 `}>
 			<div className='px-2 container w-full flex items-center justify-between mx-auto relative'>
 				<div className='text-xl font-bold w-1/4'>
-					<Link
-						href={`/${lang}`}
-						onClick={() => setShowMobileMenu(showMobileMenu ? false : true)}>
+					<Link href={`/${lang}`}>
+						{/* onClick={() => setShowMobileMenu(showMobileMenu ? false : true)}> */}
 						<img
 							src='/logo.png'
 							alt=''

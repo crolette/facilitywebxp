@@ -1,5 +1,9 @@
 import { dictionaries, Lang } from '@/lib/dictionaries';
 
+export async function generateStaticParams(): Promise<{ lang: Lang }[]> {
+	return (['en', 'fr', 'de', 'nl'] as Lang[]).map((lang) => ({ lang }));
+}
+
 export default async function ContactPage({
 	params
 }: {

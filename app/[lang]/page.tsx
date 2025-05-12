@@ -2,6 +2,16 @@
 import { dictionaries, Lang } from '@/lib/dictionaries';
 import Button from '../components/Button';
 import Link from 'next/link';
+import { Metadata } from 'next';
+
+export async function generateStaticParams(): Promise<{ lang: Lang }[]> {
+	return (['en', 'fr', 'de', 'nl'] as Lang[]).map((lang) => ({ lang }));
+}
+
+export const metadata: Metadata = {
+	title: 'Facility Web Experience',
+	description: 'Facility Management and Web Development under one roof'
+};
 
 export default async function HomePage({
 	params
@@ -24,15 +34,15 @@ export default async function HomePage({
 					className='sticky top-0 h-screen flex flex-col items-center justify-center bg-secondary text-foreground'
 					id='facility'>
 					<div className='container p-10 space-y-3'>
-						<h2 className='text-4xl font-bold'>Facility Management</h2>
+						<h2 className='text-4xl font-bold'>{t.menuFacility}</h2>
 						<p className='mt-2'>{t.facilitySectionLine1}</p>
 						<p className='font-semibold'>{t.facilitySectionTitle1}</p>
 						<p className='mt-2'>{t.facilitySectionLine2}</p>
 						<p className='mt-2'>{t.facilitySectionLine3}</p>
 						<p className='font-light italic font-serif'>
-							Prenez de l'avance sur la concurrence ! Ensemble, optimisons vos
-							infrastructures, maximisons votre potentiel pour une efficacité
-							durable !
+							Prenez de l&apos;avance sur la concurrence ! Ensemble, optimisons
+							vos infrastructures, maximisons votre potentiel pour une
+							efficacité durable !
 						</p>
 						{/* <Link href={`${lang}/facility`}> */}
 						<Link href={`#contact`}>
@@ -44,14 +54,14 @@ export default async function HomePage({
 					className='sticky top-0 h-screen flex flex-col items-center justify-center bg-accent text-white'
 					id='web'>
 					<div className='container p-10 space-y-3'>
-						<h2 className='text-4xl font-bold'>Web Development</h2>
+						<h2 className='text-4xl font-bold'>{t.menuWeb}</h2>
 						<p className='mt-2'>
 							La compétitivté de votre PME, passe aussi par votre présence en
 							ligne ! Pour assurer cette compétitivité, vous avez besoin de
-							visibilité !{' '}
+							visibilité !
 						</p>
 						<p className='font-semibold'>
-							Notre mission ? Développer votre présence en ligne !{' '}
+							Notre mission ? Développer votre présence en ligne !
 						</p>
 						<p>
 							Notre missions est de fournir des services de consultance, de
@@ -61,8 +71,8 @@ export default async function HomePage({
 							idées en solutions numériques puissantes et efficaces.
 						</p>
 						<p className='font-light italic font-serif'>
-							Prenez de l'avance sur la concurrence ! Ensemble, développons
-							l'avenir de votre entreprise sur le web !
+							Prenez de l&apos;avance sur la concurrence ! Ensemble, développons
+							l&apos;avenir de votre entreprise sur le web !
 						</p>
 						{/* <Link href={`${lang}/web`}> */}
 						<Link href={`#contact`}>
