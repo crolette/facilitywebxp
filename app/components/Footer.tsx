@@ -23,15 +23,15 @@ export default function Footer({ lang }: { lang: Lang }) {
 								<a href={`/${lang}`}>{t.menuHome}</a>
 							</li>
 							<li>
-								<a href={`#facility`}>{t.menuFacility}</a>
+								<a href={`/#facility`}>{t.menuFacility}</a>
 								{/* <a href={`/${lang}/facility`}>{t.menuFacility}</a> */}
 							</li>
 							<li>
-								<a href={`#web`}>{t.menuWeb}</a>
+								<a href={`/#web`}>{t.menuWeb}</a>
 								{/* <a href={`/${lang}/web`}>{t.menuWeb}</a> */}
 							</li>
 							<li>
-								<a href={`#contact`}>{t.menuContact}</a>
+								<a href={`/#contact`}>{t.menuContact}</a>
 								{/* <a href={`/${lang}/contact`}>{t.menuContact}</a> */}
 							</li>
 						</ul>

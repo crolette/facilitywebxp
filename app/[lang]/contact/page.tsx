@@ -20,7 +20,12 @@ export default async function ContactPage({
 						<h1 className=''>{t.contactTitle}</h1>
 						<p className=''>{t.contactDescription}</p>
 						<div className='grid grid-cols-[30%_70%]'>
-							<div className='bg-red-500'></div>
+							<div className='bg-red-500'>
+								<p>
+									Are you ready to head North? Get in touch for more
+									information.
+								</p>
+							</div>
 							<form action=''>
 								<div>
 									<label htmlFor='name'>Name</label>

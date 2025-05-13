@@ -34,7 +34,7 @@ export default function RootLayout({
 					src='https://www.googletagmanager.com/gtag/js?id=G-DBX3VB3DGJ'></script>
 				<AnalyticsScript />
 			</head>
-			<body className={`antialiased`}>{children}</body>
+			<body className={`antialiased relative`}>{children}</body>
 		</html>
 	);
 }

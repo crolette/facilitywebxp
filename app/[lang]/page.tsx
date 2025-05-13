@@ -3,6 +3,7 @@ import { dictionaries, Lang } from '@/lib/dictionaries';
 import Button from '../components/Button';
 import Link from 'next/link';
 import { Metadata } from 'next';
+import Contact from '../components/Contact';
 
 export async function generateStaticParams(): Promise<{ lang: Lang }[]> {
 	return (['en', 'fr', 'de', 'nl'] as Lang[]).map((lang) => ({ lang }));
@@ -51,7 +52,7 @@ export default async function HomePage({
 					</div>
 				</div>
 				<div
-					className='sticky top-0 h-screen flex flex-col items-center justify-center bg-accent text-white'
+					className='sticky top-0 h-screen flex flex-col items-center justify-center bg-accent text-white '
 					id='web'>
 					<div className='container p-10 space-y-3'>
 						<h2 className='text-4xl font-bold'>{t.menuWeb}</h2>
@@ -80,19 +81,7 @@ export default async function HomePage({
 						</Link>
 					</div>
 				</div>
-				<div
-					className='relative h-screen flex flex-col items-center justify-center bg-background'
-					id='contact'>
-					<div className='container p-10 space-y-4'>
-						<h2 className='text-4xl font-bold'>{t.contactTitle}</h2>
-						<p>{t.contactUsText}</p>
-						<Link
-							href='mailto:info@facilitywebxp.be'
-							className='w-fit'>
-							<Button value={t.contactUsTitle} />
-						</Link>
-					</div>
-				</div>
+				<Contact lang={lang} />
 			</div>
 		</>
 	);
