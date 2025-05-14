@@ -15,8 +15,12 @@
 	"contactDescription": "Description contact",
 	"contactUsTitle": "Contactez-nous",
 	"contactUsText": "Intéressé ? Envoyez-nous un e-mail et nous vous répondrons dans les plus brefs délais.",
+	"contactPhone": "Votre numéro de téléphone",
+	"contactEmail": "Votre adresse e-mail",
+	"contactName": "Votre nom",
+	"contactMessage": "Votre message",
 
-	"knowMore": "Tell me more",
+	"knowMore": "En savoir plus",
 
 	"facilitySectionLine1": "En tant que responsable de PME, votre objectif est votre compétitivité ! Pour assurer cette compétitivité, vous avez besoin d’infrastructures adaptées, améliorant vos conditions de travail et celles de votre personnel tout en optimisant leurs coûts.",
 	"facilitySectionTitle1": "Le Facility Management est la solution !",

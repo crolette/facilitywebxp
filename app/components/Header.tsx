@@ -1,9 +1,10 @@
 'use client';
 
-import { Lang } from '@/lib/dictionaries';
+import { Lang } from '../../lib/dictionaries';
 import Link from 'next/link';
 import { useState } from 'react';
 import Menu from './Menu';
+import { MenuIcon, X } from 'lucide-react';
 
 export default function Header({ lang }: { lang: Lang }) {
 	const [showMobileMenu, setShowMobileMenu] = useState(false);
@@ -28,8 +29,8 @@ export default function Header({ lang }: { lang: Lang }) {
 						/>
 					</Link>
 				</div>
-				{/* <div className='flex flex-row gap-4 cursor-pointer'>
-					<Languages pageLang={lang} />
+				<div className='flex flex-row gap-4 cursor-pointer'>
+					{/* <Languages pageLang={lang} /> */}
 					<button onClick={() => setShowMobileMenu(!showMobileMenu)}>
 						{!showMobileMenu ? (
 							<MenuIcon
@@ -40,7 +41,7 @@ export default function Header({ lang }: { lang: Lang }) {
 							<X size={40} />
 						)}
 					</button>
-				</div> */}
+				</div>
 			</div>
 			{showMobileMenu && (
 				<Menu

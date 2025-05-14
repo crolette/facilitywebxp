@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { usePathname, useRouter } from 'next/navigation';
-import { Lang } from '@/lib/dictionaries';
+import { Lang } from '../../lib/dictionaries';
 
 export default function Languages({ pageLang }: { pageLang: string }) {
 	const [selectedLang, setSelectedLang] = useState<string>(pageLang);

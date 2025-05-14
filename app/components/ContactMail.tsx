@@ -1,5 +1,4 @@
 import { dictionaries, Lang } from '../../lib/dictionaries';
-import ContactForm from './ContactForm';
 
 export default function Contact({
 	lang,
@@ -19,8 +18,10 @@ export default function Contact({
 			<div className='container p-10 space-y-4'>
 				<h2 className='text-4xl font-bold'>{t.contactTitle}</h2>
 				<p className='text-3xl font-serif font-extralight'>{headlineText}</p>
-				{/* <p>{t.contactUsText}</p> */}
-				<ContactForm lang={lang} />
+				<p>{t.contactUsText}</p>
+				<a href='mailto:info@facilitywebxp.be'>
+					<button>Contact</button>
+				</a>
 			</div>
 		</div>
 	);

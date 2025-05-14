@@ -1,10 +1,9 @@
 'use client';
 
 import Link from 'next/link';
-import { Lang } from '@/lib/dictionaries';
+import { Lang } from '../../lib/dictionaries';
 
 export default function Menu({
-	// eslint-disable-next-line @typescript-eslint/no-unused-vars
 	lang,
 	closeMenu
 }: {
@@ -13,9 +12,9 @@ export default function Menu({
 }) {
 	const navLinks = [
 		{ href: '/', key: 'home' },
-		{ href: '/#facility', key: 'facility management' },
-		{ href: '/#web', key: 'web development' },
-		{ href: '/#contact', key: 'contact' }
+		{ href: '/facility', key: 'facility management' },
+		{ href: '/web', key: 'Développement web' },
+		{ href: '/contact', key: 'contact' }
 	];
 
 	// const t = dictionaries[lang];
@@ -29,8 +28,8 @@ export default function Menu({
 							<Link
 								onClick={() => closeMenu()}
 								key={link.key}
-								href={`${link.href}`}
-								// href={`/${lang}/${link.href}`}
+								// href={`${link.href}`}
+								href={`/${lang}/${link.href}`}
 								className='hover:underline capitalize'>
 								{link.key}
 							</Link>

@@ -1,8 +1,9 @@
-import { dictionaries, Lang } from '@/lib/dictionaries';
+import ContactForm from '../../components/ContactForm';
+import { dictionaries, Lang } from '../../../lib/dictionaries';
 
-export async function generateStaticParams(): Promise<{ lang: Lang }[]> {
-	return (['en', 'fr', 'de', 'nl'] as Lang[]).map((lang) => ({ lang }));
-}
+// export async function generateStaticParams(): Promise<{ lang: Lang }[]> {
+// 	return (['fr'] as Lang[]).map((lang) => ({ lang }));
+// }
 
 export default async function ContactPage({
 	params
@@ -19,44 +20,7 @@ export default async function ContactPage({
 					<div className='container'>
 						<h1 className=''>{t.contactTitle}</h1>
 						<p className=''>{t.contactDescription}</p>
-						<div className='grid grid-cols-[30%_70%]'>
-							<div className='bg-red-500'>
-								<p>
-									Are you ready to head North? Get in touch for more
-									information.
-								</p>
-							</div>
-							<form action=''>
-								<div>
-									<label htmlFor='name'>Name</label>
-									<input
-										type='text'
-										name='name'
-										id='name'
-										placeholder='Your name'
-									/>
-								</div>
-								<div>
-									<label htmlFor='tel'>Phone</label>
-									<input
-										type='text'
-										name='tel'
-										id='tel'
-										placeholder='Your phone'
-									/>
-								</div>
-								<div>
-									<label htmlFor='email'>Email</label>
-									<input
-										type='email'
-										name='email'
-										id='email'
-										placeholder='Your email'
-									/>
-								</div>
-								<button type='submit'>Send</button>
-							</form>
-						</div>
+						<ContactForm lang={lang} />
 					</div>
 				</div>
 			</div>

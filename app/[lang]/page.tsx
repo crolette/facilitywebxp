@@ -1,13 +1,15 @@
 // app/[lang]/page.tsx
-import { dictionaries, Lang } from '@/lib/dictionaries';
+import { dictionaries, Lang } from '../../lib/dictionaries';
 import Button from '../components/Button';
 import Link from 'next/link';
 import { Metadata } from 'next';
 import Contact from '../components/Contact';
+import ArrowBottomPage from '../components/ui/ArrowBottomPage';
+import ContactMail from '../components/ContactMail';
 
-export async function generateStaticParams(): Promise<{ lang: Lang }[]> {
-	return (['en', 'fr', 'de', 'nl'] as Lang[]).map((lang) => ({ lang }));
-}
+// export async function generateStaticParams(): Promise<{ lang: Lang }[]> {
+// 	return (['fr'] as Lang[]).map((lang) => ({ lang }));
+// }
 
 export const metadata: Metadata = {
 	title: 'Facility Web Experience',
@@ -45,9 +47,8 @@ export default async function HomePage({
 							vos infrastructures, maximisons votre potentiel pour une
 							efficacité durable !
 						</p>
-						{/* <Link href={`${lang}/facility`}> */}
-						<Link href={`#contact`}>
-							<Button value={t.contactUsTitle} />
+						<Link href={`${lang}/facility`}>
+							<Button value={t.knowMore} />
 						</Link>
 					</div>
 				</div>
@@ -75,14 +76,15 @@ export default async function HomePage({
 							Prenez de l&apos;avance sur la concurrence ! Ensemble, développons
 							l&apos;avenir de votre entreprise sur le web !
 						</p>
-						{/* <Link href={`${lang}/web`}> */}
-						<Link href={`#contact`}>
-							<Button value={t.contactUsTitle} />
+						<Link href={`${lang}/web`}>
+							<Button value={t.knowMore} />
 						</Link>
 					</div>
 				</div>
 				<Contact lang={lang} />
+				<ContactMail lang={lang} />
 			</div>
+			<ArrowBottomPage />
 		</>
 	);
 }

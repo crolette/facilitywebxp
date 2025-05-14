@@ -59,13 +59,17 @@ h1 {
 }
 
 h2 {
-	@apply text-3xl font-medium mt-10 mb-4 uppercase;
+	@apply text-4xl font-medium mt-10 mb-4 uppercase;
 }
 
 h3 {
-	@apply uppercase;
+	@apply text-3xl uppercase  mt-6 mb-2;
 }
 
 h4 {
 	@apply uppercase;
+}
+
+.highlight {
+	@apply font-serif italic text-2xl;
 }
