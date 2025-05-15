@@ -1,14 +1,10 @@
 /* eslint-disable react/no-unescaped-entities */
 // app/[lang]/page.tsx
 import Button from '../../components/Button';
-import Contact from '../../components/Contact';
 import ArrowBottomPage from '../../components/ui/ArrowBottomPage';
 import { dictionaries, Lang } from '../../../lib/dictionaries';
 import Link from 'next/link';
-
-// export async function generateStaticParams(): Promise<{ lang: Lang }[]> {
-// 	return (['fr'] as Lang[]).map((lang) => ({ lang }));
-// }
+import Contact from '../../components/Contact';
 
 export default async function HomePage({
 	params

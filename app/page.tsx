@@ -1,5 +1,7 @@
-import { redirect } from 'next/navigation';
-
-export default function RootRedirect() {
-	redirect('/fr');
+export default function Home() {
+	return (
+		<main>
+			<p>Redirecting...</p>
+		</main>
+	);
 }

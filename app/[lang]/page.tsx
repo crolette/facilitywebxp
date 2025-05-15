@@ -5,11 +5,6 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 import Contact from '../components/Contact';
 import ArrowBottomPage from '../components/ui/ArrowBottomPage';
-import ContactMail from '../components/ContactMail';
-
-// export async function generateStaticParams(): Promise<{ lang: Lang }[]> {
-// 	return (['fr'] as Lang[]).map((lang) => ({ lang }));
-// }
 
 export const metadata: Metadata = {
 	title: 'Facility Web Experience',
@@ -82,7 +77,6 @@ export default async function HomePage({
 					</div>
 				</div>
 				<Contact lang={lang} />
-				<ContactMail lang={lang} />
 			</div>
 			<ArrowBottomPage />
 		</>

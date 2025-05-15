@@ -1,4 +1,5 @@
 import { dictionaries, Lang } from '../../lib/dictionaries';
+import Button from './Button';
 
 export default function Contact({
 	lang,
@@ -20,7 +21,7 @@ export default function Contact({
 				<p className='text-3xl font-serif font-extralight'>{headlineText}</p>
 				<p>{t.contactUsText}</p>
 				<a href='mailto:info@facilitywebxp.be'>
-					<button>Contact</button>
+					<Button value={'contact'} />
 				</a>
 			</div>
 		</div>

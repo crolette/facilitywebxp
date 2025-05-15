@@ -1,9 +1,5 @@
-import ContactForm from '../../components/ContactForm';
 import { dictionaries, Lang } from '../../../lib/dictionaries';
-
-// export async function generateStaticParams(): Promise<{ lang: Lang }[]> {
-// 	return (['fr'] as Lang[]).map((lang) => ({ lang }));
-// }
+import ContactForm from '../../components/ContactForm';
 
 export default async function ContactPage({
 	params
