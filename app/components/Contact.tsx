@@ -14,10 +14,12 @@ export default function Contact({
 
 	return (
 		<div
-			className='relative h-screen flex flex-col items-center justify-center bg-background'
+			className='relative min-h-screen flex flex-col items-center justify-center bg-background px-4'
 			id='contact'>
-			<div className='container p-10 space-y-4'>
-				<h2 className='text-4xl font-bold'>{t.contactTitle}</h2>
+			<div className='container  border-b-[120px] border-background'>
+				<h2 className='sticky top-0 border-t-[120px] border-background bg-background py-5'>
+					{t.contactTitle}
+				</h2>
 				<p className='text-3xl font-serif font-extralight'>{headlineText}</p>
 				{/* <p>{t.contactUsText}</p> */}
 				<ContactForm lang={lang} />

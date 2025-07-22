@@ -19,7 +19,7 @@ export default async function HomePage({
 			<div className='relative'>
 				<div
 					id='1'
-					className='sticky top-0 h-screen flex flex-col items-center justify-center bg-accent text-secondary text-center'>
+					className='sticky top-0 h-screen flex flex-col items-center justify-center   text-center'>
 					<div className='container space-y-10'>
 						<h1 className=''>Développement web</h1>
 						<p className=''>
@@ -51,7 +51,7 @@ export default async function HomePage({
 				</div>
 				<div
 					id='2'
-					className='sticky top-0 h-screen flex flex-col items-center justify-center bg-background text-accent text-center'>
+					className='sticky top-0 h-screen flex flex-col items-center justify-center bg-accent text-background text-center'>
 					<div className='container space-y-10'>
 						<h2 className=''>Nos services</h2>
 						<ul className='flex justify-around gap-4'>

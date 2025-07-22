@@ -13,7 +13,7 @@ export default function Button({
 		: ' bg-secondary border-2 border-accent text-accent hover:bg-accent hover:border-secondary hover:text-secondary  focus:outline-blue-500 focus:underline hover:border-red-500';
 	return (
 		<button
-			className={`py-2 px-6 uppercase text-sm tracking-tight font-semibold cursor-pointer h-fit  w-fit  ${classes} ${classname}`}
+			className={`mt-2 py-2 px-6 uppercase text-sm tracking-tight font-semibold cursor-pointer h-fit  w-fit  ${classes} ${classname}`}
 			{...props}>
 			{value}
 		</button>

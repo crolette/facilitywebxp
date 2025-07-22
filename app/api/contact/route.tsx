@@ -5,6 +5,12 @@ import nodemailer from 'nodemailer';
 export async function POST(req: NextRequest) {
 	const body = await req.json();
 	const { name, email, phone, message } = body;
+	console.log(
+		`[
+					${process.env.FIRST_CONTACT_RECEIVER_EMAIL},
+					${process.env.SECOND_CONTACT_RECEIVER_EMAIL}
+				]`
+	);
 
 	const transporter = nodemailer.createTransport({
 		host: process.env.SMTP_HOST,
@@ -17,9 +23,16 @@ export async function POST(req: NextRequest) {
 	});
 
 	try {
-		await transporter.sendMail({
+		const info = await transporter.sendMail({
 			from: `"${name}" <${email}>`,
-			to: process.env.CONTACT_RECEIVER_EMAIL,
+			to: `${process.env.FIRST_CONTACT_RECEIVER_EMAIL}`,
+			envelope: {
+				from: `${email}`,
+				to: [
+					`${process.env.FIRST_CONTACT_RECEIVER_EMAIL}`,
+					`${process.env.SECOND_CONTACT_RECEIVER_EMAIL}`
+				]
+			},
 			subject: `Contact Form Submission from ${name}`,
 			html: `
 			<h2>New Contact Request</h2>
@@ -29,6 +42,8 @@ export async function POST(req: NextRequest) {
 			<p><strong>Message:</strong><br/>${message.replace(/\n/g, '<br/>')}</p>
 		  `
 		});
+
+		console.log('Envelope used:', info.envelope);
 
 		return NextResponse.json({ success: true });
 	} catch (err) {

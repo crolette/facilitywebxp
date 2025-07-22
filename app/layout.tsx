@@ -1,17 +1,19 @@
 /* eslint-disable @next/next/next-script-for-ga */
-import { Newsreader, Lexend } from 'next/font/google';
+import { Bruno_Ace, MuseoModerno } from 'next/font/google';
 import './globals.css';
 import AnalyticsScript from './components/AnalyticsScript';
 import { Metadata } from 'next';
 
-const newsReader = Newsreader({
+const bruno = Bruno_Ace({
 	subsets: ['latin'],
-	weight: ['200', '300', '400'],
-	variable: '--font-newsreader'
+	weight: ['400'],
+	variable: '--font-bruno'
 });
-const lexend = Lexend({
+
+const museo = MuseoModerno({
 	subsets: ['latin'],
-	variable: '--font-lexend'
+	weight: ['200', '300', '400', '500', '600', '700', '800', '900'],
+	variable: '--font-museo'
 });
 
 export const metadata: Metadata = {
@@ -27,7 +29,7 @@ export default function RootLayout({
 	return (
 		<html
 			lang='en'
-			className={` ${newsReader.className} ${lexend.className}`}>
+			className={` ${bruno.className} ${museo.className}`}>
 			<head>
 				<script
 					async

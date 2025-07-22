@@ -13,13 +13,12 @@ export default function Header({ lang }: { lang: Lang }) {
 		<header
 			className={`${
 				showMobileMenu
-					? 'grid grid-rows-[120px_1fr] h-full transition-all duration-150 bg-background '
-					: 'grid grid-rows-[120px] items-center transition-all duration-150 '
-			} text-foreground z-50 w-full mx-auto fixed top-0 `}>
+					? 'grid grid-rows-[120px_1fr] h-full transition-all duration-150  '
+					: 'grid grid-rows-[120px] items-center transition-all duration-150  '
+			} text-foreground z-50 w-full mx-auto fixed top-0 left-0 px-4 bg-background text-center`}>
 			<div className='px-2 container w-full flex items-center justify-between mx-auto relative'>
 				<div className='text-xl font-bold w-1/4'>
 					<Link href={`/${lang}`}>
-						{/* onClick={() => setShowMobileMenu(showMobileMenu ? false : true)}> */}
 						<img
 							src='/logo.png'
 							alt=''

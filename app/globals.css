@@ -4,7 +4,7 @@
 	--background: #fff;
 	--secondary: #fbf4ea;
 	--foreground: #171717;
-	--accent: #222c17;
+	--accent: hsl(89, 31%, 13%);
 }
 
 @theme inline {
@@ -26,7 +26,7 @@
 body {
 	background: var(--background);
 	color: var(--foreground);
-	font-family: Lexend, sans-serif;
+	font-family: MuseoModerno, sans-serif;
 	font-weight: 200;
 }
 
@@ -51,11 +51,11 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: NewsReader, serif;
+	font-family: 'Bruno ACE', serif;
 }
 
 h1 {
-	@apply text-5xl md:text-9xl;
+	@apply text-5xl md:text-9xl mb-10;
 }
 
 h2 {
@@ -63,13 +63,204 @@ h2 {
 }
 
 h3 {
-	@apply text-3xl uppercase  mt-6 mb-2;
+	@apply text-3xl uppercase  mt-6 mb-3;
 }
 
 h4 {
-	@apply uppercase;
+	@apply uppercase mt-4 mb-2;
 }
 
 .highlight {
-	@apply font-serif italic text-2xl;
+	font-family: 'Bruno ACE', serif;
+	@apply italic text-xl;
+}
+
+.loader {
+	z-index: 9999;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	inset: 0%;
+	position: fixed;
+}
+
+.line {
+	flex: 1;
+	width: 100%;
+	transform-origin: right;
+	animation: slideOut 1s forwards;
+	@apply bg-accent;
+}
+
+.line1 {
+	animation-delay: 150ms;
+}
+
+.line2 {
+	animation-delay: 300ms;
+}
+
+.line3 {
+	animation-delay: 450ms;
+}
+
+@keyframes slideOut {
+	to {
+		transform: scaleX(0);
+	}
+}
+
+.title {
+	position: relative;
+	font-size: 3rem;
+	animation-duration: 3s;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease-in-out;
+	z-index: 9999;
+	background-color: rgba(245, 245, 245, 0.507);
+
+	/* mix-blend-mode: lighten; */
+}
+
+.title1 {
+	animation-name: title1Anim;
+	animation-delay: 400ms;
+	opacity: 0;
+}
+
+.title2 {
+	animation-name: title2Anim;
+	animation-delay: 400ms;
+	font-family: MuseoModerno, sans-serif;
+	opacity: 0;
+}
+
+@keyframes title1Anim {
+	0% {
+		transform: translateX(-100%);
+		font-size: 8rem;
+		opacity: 0;
+	}
+	40% {
+		transform: translateX(0);
+		opacity: 1;
+	}
+	100% {
+		transform: translateX(-150px); /* va à droite */
+		font-size: 5rem;
+		opacity: 1;
+	}
+}
+
+@keyframes title2Anim {
+	0% {
+		transform: translateX(-100%);
+		font-size: 8rem;
+		opacity: 0;
+	}
+	40% {
+		transform: translateX(0);
+		opacity: 1;
+	}
+	100% {
+		transform: translateX(150px);
+		font-size: 5rem;
+		opacity: 1;
+	}
+}
+
+.image-container {
+	position: absolute;
+	top: 45%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(0);
+	height: 50%;
+	width: 30%;
+	object-fit: cover;
+	border-radius: 10px;
+}
+
+.image-end {
+	position: absolute;
+	top: 45%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(0);
+	height: 50%;
+	width: 30%;
+	object-fit: cover;
+	border-radius: 10px;
+}
+
+#image1 {
+	animation: imageOpen 2s forwards;
+	animation-delay: 1s;
+	z-index: 1;
+}
+
+#image2 {
+	animation: imageOpen 2s forwards;
+	animation-delay: 4s;
+	z-index: 1;
+}
+
+#image3 {
+	animation: imageOpen 2s forwards;
+	animation-delay: 6s;
+	z-index: 1;
+}
+
+@keyframes imageOpen {
+	to {
+		transform: translate(-50%, -50%) scale(1);
+	}
+}
+
+.flip-card {
+	background-color: transparent;
+	width: 100%;
+	height: 100px;
+	perspective: 1000px;
+	border-radius: 24px;
+}
+
+.flip-card-inner {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	border-radius: 24px;
+	transition: transform 0.6s;
+	transform-style: preserve-3d;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+	transform: rotateX(-180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+	position: absolute;
+	border-radius: 24px;
+	width: 100%;
+	height: 100%;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.flip-card-front {
+	@apply bg-accent;
+
+	color: white;
+	padding: 8px;
+}
+
+.flip-card-back {
+	transform: rotateX(180deg);
+	@apply bg-accent/50;
+	color: black;
+	padding: 8px;
 }

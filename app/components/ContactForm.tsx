@@ -37,16 +37,16 @@ export default function ContactForm({
 	};
 
 	return (
-		<div className='grid grid-cols-[2fr_4fr] gap-4'>
-			<div className=' flex flex-col items-center justify-center p-6'>
-				<p className='bg-secondary p-20'>
+		<div className='grid grid-cols-1 md:grid-cols-[2fr_4fr] gap-4'>
+			<div className=' flex flex-col items-center justify-center p-2 md:p-6 order-2 md:order-1'>
+				<p className='bg-secondary p-6 md:p-10 w-full text-center'>
 					<b>FWebxp SRL</b>
 					<br />
 					Rue sur le Hour 16 Bis <br /> 4910 Theux <br /> Belgique <br />
 					BE 1020.619.548
 				</p>
 			</div>
-			<div className='p-6  '>
+			<div className='p-2 md:p-6  order-1 md:order-2'>
 				<form
 					onSubmit={submit}
 					className='flex flex-col gap-6 w-full '>
@@ -70,7 +70,7 @@ export default function ContactForm({
 							}
 						/>
 					</div>
-					<div className='grid grid-cols-2 gap-4'>
+					<div className='grid sm:grid-cols-2 gap-6 sm:gap-4'>
 						<div className=''>
 							<label
 								htmlFor='tel'
@@ -123,14 +123,15 @@ export default function ContactForm({
 							placeholder={t.contactMessage}
 							className='border-b border-accent w-full p-2 focus:bg-secondary'
 							required
-							minLength={100}
+							minLength={75}
+							maxLength={500}
 							rows={5}
 							onChange={(e) =>
 								setFormData({ ...formData, message: e.target.value })
 							}
 						/>
 					</div>
-					<Button value={'Send'}></Button>
+					<Button value={'Envoyer'}></Button>
 				</form>
 			</div>
 		</div>

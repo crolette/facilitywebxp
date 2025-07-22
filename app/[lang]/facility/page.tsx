@@ -2,6 +2,8 @@
 // app/[lang]/page.tsx
 import Contact from '../../components/Contact';
 import { dictionaries, Lang } from '../../../lib/dictionaries';
+import Link from 'next/link';
+import Button from '../../components/Button';
 
 export default async function HomePage({
 	params
@@ -14,7 +16,7 @@ export default async function HomePage({
 	return (
 		<>
 			<div className='relative'>
-				<div className='sticky top-0 h-screen flex flex-col items-center justify-center text-foreground text-center'>
+				<div className='sm:sticky sm:top-32 min-h-screen flex flex-col items-center justify-center text-foreground text-center px-4'>
 					<div className='container'>
 						<h1 className=''>Facility Management</h1>
 						<p className='mt-2'>{t.facilitySectionLine1}</p>
@@ -24,9 +26,11 @@ export default async function HomePage({
 						</p>
 					</div>
 				</div>
-				<div className='sticky top-0 h-screen flex flex-col items-center justify-center text-secondary bg-accent'>
-					<div className='container'>
-						<h2 className=''>Qu'est-ce-que le Facility Management ?</h2>
+				<div className='sticky min-h-screen flex flex-col items-center justify-center text-secondary bg-accent px-4'>
+					<div className='container border-b-[120px] border-accent space-y-2'>
+						<h2 className='sticky top-0 border-t-[120px] border-accent bg-accent py-5'>
+							Qu'est-ce-que le Facility Management ?
+						</h2>
 						<p className='mt-2'>
 							Le Facility Management est cette discipline qui a pour mission
 							d'élaborer et de mettre en œuvre des moyens, des services et des
@@ -43,33 +47,33 @@ export default async function HomePage({
 							laps de temps assez court, les conditions d’exercice du métier.
 						</p>
 						<h3>Les nouveaux enjeux de la profession</h3>
-						<ul className='flex justify-around gap-4'>
-							<li className='w-80 bg-background text-accent p-4'>
+						<div className='grid grid-cols-2 grid-rows-2 gap-4'>
+							<div className='bg-background text-accent w-full p-4'>
 								<h4>Développement durable</h4>
 								<p>
-									construction et exploitation HQE (haute qualité
+									Construction et exploitation HQE (haute qualité
 									environnementale) des bâtiments de bureaux, économies
 									d’énergie, qualité de l’air et de l’eau, optimisation de
 									l’utilisation des ressources, …
 								</p>
-							</li>
-							<li className='w-80 bg-background text-accent p-4'>
+							</div>
+							<div className='bg-background text-accent w-full p-4'>
 								<h4>Insertion</h4>
 								<p>
 									L’insertion des personnes souffrant de handicap et de publics
 									en difficulté, mixité et diversité, équilibre des relations
 									donneurs d’ordres / prestataires...
 								</p>
-							</li>
-							<li className='w-80 bg-background text-accent p-4'>
+							</div>
+							<div className='bg-background text-accent w-full p-4'>
 								<h4>Bien-être et lutte contre le stress</h4>
 								<p>
 									évaluation des risques professionnels, ergonomie,
 									conciergeries, crèches d’entreprise, restauration, salles de
 									sport, massages...
 								</p>
-							</li>
-							<li className='w-80 bg-background text-accent p-4'>
+							</div>
+							<div className='bg-background text-accent w-full p-4'>
 								<h4>Eefficacité des équipes et attractivité de l’entreprise</h4>
 								<p>
 									Dans un contexte de compétition exacerbée et de lutte pour
@@ -78,13 +82,19 @@ export default async function HomePage({
 									vont devenir une arme essentielle et un atout compétitif
 									majeur dans les années à venir.
 								</p>
-							</li>
-						</ul>
+							</div>
+						</div>
+
+						<Link href={`#contact`}>
+							<Button value={t.contactUsTitle} />
+						</Link>
 					</div>
 				</div>
-				<div className='sticky top-0 h-screen flex flex-col items-center justify-center text-foreground bg-secondary'>
-					<div className='container'>
-						<h2 className=''>Comment pouvons-nous vous aider ?</h2>
+				<div className='sticky min-h-screen flex flex-col items-center justify-center text-foreground bg-secondary px-4'>
+					<div className='container  border-b-[120px] border-secondary'>
+						<h2 className='sticky top-0 border-t-[120px] border-secondary bg-secondary py-5'>
+							Comment pouvons-nous vous aider ?
+						</h2>
 						<p className='mt-2'>
 							Notre consultance en Facility management implique l'analyse, la
 							planification et la supervision des services et des
@@ -95,54 +105,87 @@ export default async function HomePage({
 							services et des infrastructures de votre entreprise, tout en
 							réduisant les coûts et en augmentant votre efficacité.
 						</p>
-						<h3>Notre accompagnement pour votre entreprise se traduit par:</h3>
-						<div className='container flex flex-row justify-between gap-10 flex-wrap'>
-							<ul className='flex flex-wrap'>
-								<li className=''>
-									<h4>Optimisation des ressources</h4>
-									<p>
-										Réduire les coûts en améliorant la gestion des ressources
-										telles que l'énergie, l'espace et les équipements, …
-									</p>
-								</li>
-								<li>
-									<h4>Amélioration de votre productivité</h4>
-									<p>
-										Simplifier les processus et les opérations pour augmenter
-										votre efficacité et votre performance globale.
-									</p>
-								</li>
-								<li>
-									<h4>Réduction de l’empreinte carbone de votre entreprise</h4>
-									<p>
-										Utilisation des énergies renouvelables, optimisation des
-										consommations d'énergies, réduction des déchets, gestion
-										efficace de l'eau, compensation carbone, …
-									</p>
-								</li>
-								<li>
-									<h4>Conformité réglementaire</h4>
-									<p>
-										Assurer que votre entreprise respecte les normes et les
-										réglementations en vigueur pour éviter les sanctions.
-									</p>
-								</li>
-								<li>
-									<h4>Qualité de vie au travail</h4>
-									<p>
-										Créer un environnement de travail agréable et bien géré pour
-										augmenter la satisfaction et l'engagement de votre
-										personnel.
-									</p>
-								</li>
-							</ul>
+						<h4>Notre accompagnement pour votre entreprise se traduit par:</h4>
+						<div className='container flex flex-row gap-10 flex-wrap'>
+							<div className='flip-card'>
+								<div className='flip-card-inner'>
+									<div className='flip-card-front'>
+										<h4>Optimisation des ressources</h4>
+									</div>
+									<div className='flip-card-back'>
+										<p className=''>
+											Réduction des coûts en améliorant la gestion des
+											ressources telles que l'énergie, l'espace et les
+											équipements, …
+										</p>
+									</div>
+								</div>
+							</div>
+							<div className='flip-card'>
+								<div className='flip-card-inner'>
+									<div className='flip-card-front'>
+										<h4>Amélioration de votre productivité</h4>
+									</div>
+									<div className='flip-card-back'>
+										<p className=''>
+											Simplification des processus et des opérations pour
+											augmenter votre efficacité et votre performance globale.
+										</p>
+									</div>
+								</div>
+							</div>
+							<div className='flip-card'>
+								<div className='flip-card-inner'>
+									<div className='flip-card-front'>
+										<h4>
+											Réduction de l’empreinte carbone de votre entreprise
+										</h4>
+									</div>
+									<div className='flip-card-back'>
+										<p className=''>
+											Utilisation des énergies renouvelables, optimisation des
+											consommations d'énergies, réduction des déchets, gestion
+											efficace de l'eau, compensation carbone, …
+										</p>
+									</div>
+								</div>
+							</div>
+							<div className='flip-card'>
+								<div className='flip-card-inner'>
+									<div className='flip-card-front'>
+										<h4>Conformité réglementaire</h4>
+									</div>
+									<div className='flip-card-back'>
+										<p className=''>
+											Assurer que votre entreprise respecte les normes et les
+											réglementations en vigueur pour éviter les sanctions.
+										</p>
+									</div>
+								</div>
+							</div>
+							<div className='flip-card'>
+								<div className='flip-card-inner'>
+									<div className='flip-card-front'>
+										<h4>Qualité de vie au travail</h4>
+									</div>
+									<div className='flip-card-back'>
+										<p className=''>
+											Créer un environnement de travail agréable et bien géré
+											pour augmenter la satisfaction et l'engagement de votre
+											personnel.
+										</p>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
 
-				<div className='sticky top-0 h-screen flex flex-col items-center justify-center text-accent bg-background'>
-					<div className='container'>
-						<h2 className=''>Pourquoi choisir Facility Web Experience ?</h2>
+				<div className='sm:sticky sm:top-0 min-h-screen flex flex-col items-center justify-center text-accent bg-background px-4'>
+					<div className='container  border-b-[120px] border-background'>
+						<h2 className='sticky top-0 border-t-[120px] border-background bg-background py-5'>
+							Pourquoi choisir Facility Web Experience ?
+						</h2>
 						<p className='mt-2'>
 							Comme toute entreprise de Facility Management, nous offrons des
 							services tels que la gestion des infrastructures, la gestion des
@@ -169,8 +212,8 @@ export default async function HomePage({
 								adaptation permanente aux évolutions du métier
 							</li>
 							<li className='ml-16'>
-								L’utilisation de notre solution unique pensée par une PME pour
-								les PME
+								L’utilisation de notre solution unique, SME-Facility, pensée par
+								une PME pour les PME
 							</li>
 							<li className='ml-20'>
 								L’intégration naturelle et sans contrainte des objectifs de
@@ -181,6 +224,11 @@ export default async function HomePage({
 								votre entreprise ou créer une application SAAS adaptée à vos
 								besoins, en intégrant des technologies avancées comme
 								l'intelligence artificielle.
+								<a
+									href={`${lang}/web`}
+									className='underline block'>
+									Voir la page Web Development
+								</a>
 							</li>
 						</ul>
 						<p className='font-serif text-4xl mt-10 text-center'></p>
