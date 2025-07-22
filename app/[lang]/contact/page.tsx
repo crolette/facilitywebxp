@@ -1,5 +1,6 @@
 import { dictionaries, Lang } from '../../../lib/dictionaries';
 import ContactForm from '../../components/ContactForm';
+import DividerHero from '../../components/DividerHero';
 
 export default async function ContactPage({
 	params
@@ -11,6 +12,7 @@ export default async function ContactPage({
 
 	return (
 		<>
+			<DividerHero />
 			<div className='relative'>
 				<div className='sticky top-0 h-screen flex flex-col items-center justify-center text-center'>
 					<div className='container'>

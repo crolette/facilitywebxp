@@ -1,7 +1,7 @@
 'use client';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 
-export default function AnimationHero(text) {
+export default function AnimationHero() {
 	useEffect(() => {
 		const timeoutLoader = setTimeout(() => {
 			const loader = document.getElementById('loader');

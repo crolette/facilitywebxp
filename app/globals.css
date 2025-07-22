@@ -55,19 +55,27 @@ h6 {
 }
 
 h1 {
-	@apply text-5xl md:text-9xl mb-10;
+	font-size: clamp(2rem, 5vw, 6rem);
+	@apply mb-10;
 }
 
 h2 {
-	@apply text-4xl font-medium mt-10 mb-4 uppercase;
+	font-size: clamp(1.75rem, 4vw, 3rem);
+	@apply font-medium mt-10 mb-4 uppercase;
 }
 
 h3 {
-	@apply text-3xl uppercase  mt-6 mb-3;
+	font-size: clamp(1.5rem, 2.5vw, 2rem);
+	@apply uppercase  mt-6 mb-3;
 }
 
 h4 {
+	font-size: clamp(1rem, 1.5vw, 1.5rem);
 	@apply uppercase mt-4 mb-2;
+}
+
+p {
+	font-size: clamp(1rem, 1.25vw, 1.5rem);
 }
 
 .highlight {
@@ -112,7 +120,7 @@ h4 {
 
 .title {
 	position: relative;
-	font-size: 3rem;
+	font-size: clamp(2.5rem, 8vw, 12rem);
 	animation-duration: 3s;
 	animation-fill-mode: forwards;
 	animation-timing-function: ease-in-out;
@@ -137,8 +145,8 @@ h4 {
 
 @keyframes title1Anim {
 	0% {
-		transform: translateX(-100%);
-		font-size: 8rem;
+		transform: translateX(-100vw);
+		font-size: 10vw;
 		opacity: 0;
 	}
 	40% {
@@ -146,16 +154,16 @@ h4 {
 		opacity: 1;
 	}
 	100% {
-		transform: translateX(-150px); /* va à droite */
-		font-size: 5rem;
+		transform: translateX(-10vw); /* écarte à gauche */
+		font-size: 6vw;
 		opacity: 1;
 	}
 }
 
 @keyframes title2Anim {
 	0% {
-		transform: translateX(-100%);
-		font-size: 8rem;
+		transform: translateX(-100vw);
+		font-size: 10vw;
 		opacity: 0;
 	}
 	40% {
@@ -163,8 +171,8 @@ h4 {
 		opacity: 1;
 	}
 	100% {
-		transform: translateX(150px);
-		font-size: 5rem;
+		transform: translateX(10vw); /* écarte à droite */
+		font-size: 6vw;
 		opacity: 1;
 	}
 }
@@ -174,8 +182,10 @@ h4 {
 	top: 45%;
 	left: 50%;
 	transform: translate(-50%, -50%) scale(0);
-	height: 50%;
-	width: 30%;
+	width: 60vw;
+	height: auto;
+	max-width: 90vw;
+	max-height: 60vh;
 	object-fit: cover;
 	border-radius: 10px;
 }
@@ -185,10 +195,20 @@ h4 {
 	top: 45%;
 	left: 50%;
 	transform: translate(-50%, -50%) scale(0);
-	height: 50%;
-	width: 30%;
+	width: 60vw;
+	height: auto;
+	max-width: 90vw;
+	max-height: 60vh;
 	object-fit: cover;
 	border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+	.image-container,
+	.image-end {
+		width: 80vw;
+		max-height: 50vh;
+	}
 }
 
 #image1 {

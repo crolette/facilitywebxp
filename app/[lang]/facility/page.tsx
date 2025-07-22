@@ -4,6 +4,7 @@ import Contact from '../../components/Contact';
 import { dictionaries, Lang } from '../../../lib/dictionaries';
 import Link from 'next/link';
 import Button from '../../components/Button';
+import DividerHero from '../../components/DividerHero';
 
 export default async function HomePage({
 	params
@@ -15,6 +16,7 @@ export default async function HomePage({
 
 	return (
 		<>
+			<DividerHero />
 			<div className='relative'>
 				<div className='sm:sticky sm:top-32 min-h-screen flex flex-col items-center justify-center text-foreground text-center px-4'>
 					<div className='container'>
@@ -27,7 +29,7 @@ export default async function HomePage({
 					</div>
 				</div>
 				<div className='sticky min-h-screen flex flex-col items-center justify-center text-secondary bg-accent px-4'>
-					<div className='container border-b-[120px] border-accent space-y-2'>
+					<div className='container border-b-[120px] border-accent space-y-2 xl:px-20'>
 						<h2 className='sticky top-0 border-t-[120px] border-accent bg-accent py-5'>
 							Qu'est-ce-que le Facility Management ?
 						</h2>
@@ -47,51 +49,98 @@ export default async function HomePage({
 							laps de temps assez court, les conditions d’exercice du métier.
 						</p>
 						<h3>Les nouveaux enjeux de la profession</h3>
-						<div className='grid grid-cols-2 grid-rows-2 gap-4'>
-							<div className='bg-background text-accent w-full p-4'>
-								<h4>Développement durable</h4>
-								<p>
-									Construction et exploitation HQE (haute qualité
-									environnementale) des bâtiments de bureaux, économies
-									d’énergie, qualité de l’air et de l’eau, optimisation de
-									l’utilisation des ressources, …
-								</p>
+						<div className='grid grid-cols-1 sm:grid-cols-2 sm:grid-rows-2 gap-4'>
+							<div className='bg-background text-accent w-full'>
+								<div>
+									<img
+										src='/sustainability.jpg'
+										alt=''
+										className='w-full h-80 object-cover'
+									/>
+								</div>
+
+								<div className='p-4'>
+									<h4 className=''>Développement durable</h4>
+									<p>
+										Construction et exploitation HQE (haute qualité
+										environnementale) des bâtiments de bureaux, économies
+										d’énergie, qualité de l’air et de l’eau, optimisation de
+										l’utilisation des ressources, …
+									</p>
+								</div>
 							</div>
-							<div className='bg-background text-accent w-full p-4'>
-								<h4>Insertion</h4>
-								<p>
-									L’insertion des personnes souffrant de handicap et de publics
-									en difficulté, mixité et diversité, équilibre des relations
-									donneurs d’ordres / prestataires...
-								</p>
+							<div className='bg-background text-accent w-full'>
+								<div>
+									<img
+										src='/insertion.jpeg'
+										alt=''
+										className='w-full  h-80 object-cover'
+									/>
+								</div>
+
+								<div className='p-4'>
+									<h4>Insertion</h4>
+									<p>
+										L’insertion des personnes souffrant de handicap et de
+										publics en difficulté, mixité et diversité, équilibre des
+										relations donneurs d’ordres / prestataires...
+									</p>
+								</div>
 							</div>
-							<div className='bg-background text-accent w-full p-4'>
-								<h4>Bien-être et lutte contre le stress</h4>
-								<p>
-									évaluation des risques professionnels, ergonomie,
-									conciergeries, crèches d’entreprise, restauration, salles de
-									sport, massages...
-								</p>
+							<div className='bg-background text-accent w-full'>
+								<div>
+									<img
+										src='/stress.jpg'
+										alt=''
+										className='w-full  h-80 object-cover'
+									/>
+								</div>
+
+								<div className='p-4'>
+									<h4>Bien-être et lutte contre le stress</h4>
+									<p>
+										évaluation des risques professionnels, ergonomie,
+										conciergeries, crèches d’entreprise, restauration, salles de
+										sport, massages...
+									</p>
+								</div>
 							</div>
-							<div className='bg-background text-accent w-full p-4'>
-								<h4>Eefficacité des équipes et attractivité de l’entreprise</h4>
-								<p>
-									Dans un contexte de compétition exacerbée et de lutte pour
-									attirer et conserver les meilleurs talents, la qualité,
-									l’adaptabilité et l’optimisation de l’environnement de travail
-									vont devenir une arme essentielle et un atout compétitif
-									majeur dans les années à venir.
-								</p>
+							<div className='bg-background text-accent w-full'>
+								<div>
+									<img
+										src='/efficiency.jpg'
+										alt=''
+										className='w-full  h-80 object-cover'
+									/>
+								</div>
+
+								<div className='p-4'>
+									<h4>
+										Eefficacité des équipes et attractivité de l’entreprise
+									</h4>
+									<p>
+										Dans un contexte de compétition exacerbée et de lutte pour
+										attirer et conserver les meilleurs talents, la qualité,
+										l’adaptabilité et l’optimisation de l’environnement de
+										travail vont devenir une arme essentielle et un atout
+										compétitif majeur dans les années à venir.
+									</p>
+								</div>
 							</div>
 						</div>
 
-						<Link href={`#contact`}>
-							<Button value={t.contactUsTitle} />
-						</Link>
+						<div className=' w-full flex justify-center mt-10'>
+							<Link href={`#contact`}>
+								<Button
+									value={t.contactUsTitle}
+									classname='text-xl'
+								/>
+							</Link>
+						</div>
 					</div>
 				</div>
 				<div className='sticky min-h-screen flex flex-col items-center justify-center text-foreground bg-secondary px-4'>
-					<div className='container  border-b-[120px] border-secondary'>
+					<div className='container  border-b-[120px] border-secondary space-y-2 xl:px-20'>
 						<h2 className='sticky top-0 border-t-[120px] border-secondary bg-secondary py-5'>
 							Comment pouvons-nous vous aider ?
 						</h2>
@@ -178,11 +227,19 @@ export default async function HomePage({
 								</div>
 							</div>
 						</div>
+						<div className=' w-full flex justify-center mt-10'>
+							<Link href={`#contact`}>
+								<Button
+									value={t.contactUsTitle}
+									classname='text-xl'
+								/>
+							</Link>
+						</div>
 					</div>
 				</div>
 
 				<div className='sm:sticky sm:top-0 min-h-screen flex flex-col items-center justify-center text-accent bg-background px-4'>
-					<div className='container  border-b-[120px] border-background'>
+					<div className='container  border-b-[120px] border-background  space-y-2 xl:px-20'>
 						<h2 className='sticky top-0 border-t-[120px] border-background bg-background py-5'>
 							Pourquoi choisir Facility Web Experience ?
 						</h2>
@@ -225,13 +282,20 @@ export default async function HomePage({
 								besoins, en intégrant des technologies avancées comme
 								l'intelligence artificielle.
 								<a
-									href={`${lang}/web`}
+									href={`/${lang}/web`}
 									className='underline block'>
 									Voir la page Web Development
 								</a>
 							</li>
 						</ul>
-						<p className='font-serif text-4xl mt-10 text-center'></p>
+						<div className=' w-full flex justify-center mt-10'>
+							<Link href={`#contact`}>
+								<Button
+									value={t.contactUsTitle}
+									classname='text-xl'
+								/>
+							</Link>
+						</div>
 					</div>
 				</div>
 				<Contact

@@ -35,7 +35,7 @@ export default async function HomePage({
 					<div>
 						<AnimationHero text={t.welcome} />
 					</div>
-					<p className='mt-10 z-50 w-1/3 bg-accent/50 p-3 text-white'>
+					<p className='mt-10 z-50 w-10/12 sm:w-2/3 bg-accent/50 p-3 text-white'>
 						{t.welcome}
 					</p>
 				</div>
@@ -72,7 +72,7 @@ export default async function HomePage({
 					</div>
 				</div>
 				<div
-					className='sticky h-screen flex flex-col items-center justify-center bg-accent text-white '
+					className='sticky min-h-screen flex flex-col items-center justify-center bg-accent text-white  px-4'
 					id='web'>
 					<div className='container  border-b-[120px] border-accent space-y-2'>
 						<h2 className='sticky top-0 border-t-[120px] border-accent bg-accent py-5'>
