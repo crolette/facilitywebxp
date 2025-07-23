@@ -20,7 +20,7 @@ export default function Header({ lang }: { lang: Lang }) {
 				<div className='text-xl font-bold w-1/4'>
 					<Link href={`/${lang}`}>
 						<img
-							src='/logo.png'
+							src='/logo.webp'
 							alt=''
 							className='w-24 h-auto drop-shadow-[0_0_5px_rgba(255,255,255,1)]'
 							width={80}

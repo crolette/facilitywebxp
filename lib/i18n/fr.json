@@ -12,7 +12,10 @@
 	"menuContact": "Contact",
 
 	"contactTitle": "Contact",
-	"contactDescription": "Description contact",
+	"contactDescriptionLine1": "Vous avez un projet en consultance Facility Management ou besoin d’un site web professionnel ? Notre équipe est à votre écoute pour répondre à vos questions et vous accompagner dans vos démarches.",
+	"contactDescriptionLine2": "Que vous souhaitiez optimiser vos infrastructures, développer votre présence en ligne, ou simplement obtenir un devis personnalisé, n’hésitez pas à nous contacter.",
+	"contactDescriptionLine3": "Facilitez votre compétitivité grâce à une expertise sur mesure.",
+	"contactDescriptionLine4": "Remplissez le formulaire ci-dessous, nous nous engageons à vous répondre dans les plus brefs délais.",
 	"contactUsTitle": "Contactez-nous",
 	"contactUsText": "Intéressé ? Envoyez-nous un e-mail et nous vous répondrons dans les plus brefs délais.",
 	"contactPhone": "Votre numéro de téléphone",
@@ -22,8 +25,8 @@
 
 	"knowMore": "En savoir plus",
 
-	"facilitySectionLine1": "En tant que responsable de PME, votre objectif est votre compétitivité ! Pour assurer cette compétitivité, vous avez besoin d’infrastructures adaptées, améliorant vos conditions de travail et celles de votre personnel tout en optimisant leurs coûts.",
+	"facilitySectionLine1": "En tant que responsable de PME, votre compétitivité dépend directement de la qualité et de la performance de vos infrastructures.",
 	"facilitySectionTitle1": "Le Facility Management est la solution !",
-	"facilitySectionLine2": "Le Facility Management est cette discipline qui a pour mission d'élaborer et de mettre en œuvre des moyens, des services et des procédures permettant à l'ensemble des collaborateurs d'une entreprise d'assumer leurs responsabilités professionnelles dans un environnement efficace, flexible et aussi peu contraignant que possible tout en optimalisant les coûts de fonctionnement.",
-	"facilitySectionLine3": "Notre consultance en Facility management implique l'analyse, la planification et la supervision des services et des infrastructures de votre entreprise afin d'améliorer son efficacité opérationnelle. Nous pouvons gérer le suivi des opérations via nos solutions adaptées mais nous offrons surtout une vision stratégique visant à améliorer la gestion globale des services et des infrastructures de votre entreprise, tout en réduisant les coûts et en augmentant votre efficacité."
+	"facilitySectionLine2": "Grâce à notre consultance en Facility Management, nous vous aidons à analyser, planifier et superviser la gestion de vos bâtiments, équipements et services. Notre objectif : optimiser vos coûts de fonctionnement tout en garantissant un environnement de travail efficace, sûr et confortable pour vos collaborateurs.",
+	"facilitySectionLine3": "Nos solutions stratégiques en Facility Management incluent la gestion durable des ressources, la conformité réglementaire et la réduction de votre empreinte carbone, pour une entreprise performante et responsable."
 }

@@ -5,7 +5,6 @@ export default function DividerHero() {
 	useEffect(() => {
 		setTimeout(() => {
 			const loader = document.getElementById('loader');
-			console.log(loader);
 			loader?.remove();
 		}, 750);
 	}, []);

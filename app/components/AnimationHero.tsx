@@ -3,13 +3,10 @@ import { useEffect } from 'react';
 
 export default function AnimationHero() {
 	useEffect(() => {
-		const timeoutLoader = setTimeout(() => {
+		setTimeout(() => {
 			const loader = document.getElementById('loader');
-			console.log(loader);
 			loader?.remove();
-		}, 2000);
-
-		clearTimeout(timeoutLoader);
+		}, 1000);
 	}, []);
 
 	return (
@@ -37,19 +34,19 @@ export default function AnimationHero() {
 			</div>
 			<div>
 				<img
-					src='hero1.webp'
+					src='/hero1.webp'
 					alt=''
 					className='image-container'
 					id='image1'
 				/>
 				<img
-					src='hero2.webp'
+					src='/hero2.webp'
 					alt=''
 					className='image-container'
 					id='image2'
 				/>
 				<img
-					src='hero3b.webp'
+					src='/hero3b.webp'
 					alt=''
 					className='image-end'
 					id='image3'

@@ -6,6 +6,54 @@ import { dictionaries, Lang } from '../../../lib/dictionaries';
 import Link from 'next/link';
 import Contact from '../../components/Contact';
 import DividerHero from '../../components/DividerHero';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+	title:
+		'Création de Site Internet, Site Vitrine & Application Web | FacilityWebXP',
+	description:
+		'Boostez la visibilité de votre PME avec FacilityWebXP, spécialiste en création de sites vitrines, sites internet complexes et applications web sur mesure.',
+	keywords: [
+		'création site internet',
+		'site vitrine',
+		'application web',
+		'développement web PME',
+		'maintenance site web',
+		'support site internet'
+	],
+	alternates: {
+		canonical: 'https://facilitywebxp.be/fr/web',
+		languages: {
+			fr: 'https://facilitywebxp.be/fr/web',
+			'x-default': 'https://facilitywebxp.be/fr/web'
+		}
+	},
+	openGraph: {
+		title:
+			'Création de Site Internet, Site Vitrine & Application Web | FacilityWebXP',
+		description:
+			'Boostez la visibilité de votre PME avec FacilityWebXP, spécialiste en création de sites vitrines, sites internet complexes et applications web sur mesure.',
+		url: 'https://facilitywebxp.be/fr/web',
+		type: 'website',
+		locale: 'fr_FR',
+		images: [
+			{
+				url: 'https://facilitywebxp.be/logo.webp',
+				width: 1200,
+				height: 630,
+				alt: 'FacilityWebXP - Création site internet'
+			}
+		]
+	},
+	twitter: {
+		card: 'summary_large_image',
+		title:
+			'Création de Site Internet, Site Vitrine & Application Web | FacilityWebXP',
+		description:
+			'Boostez la visibilité de votre PME avec FacilityWebXP, spécialiste en création de sites vitrines, sites internet complexes et applications web sur mesure.',
+		images: ['https://facilitywebxp.be/logo.webp']
+	}
+};
 
 export default async function HomePage({
 	params
@@ -23,11 +71,13 @@ export default async function HomePage({
 					id='1'
 					className='sticky top-0 h-screen flex flex-col items-center justify-center text-center px-4'>
 					<div className='container space-y-10'>
-						<h1 className=''>Développement web</h1>
+						<h1 className='!text-4xl'>
+							Création de site internet, site vitrine et application web
+						</h1>
 						<p className=''>
-							La compétitivté de votre PME, passe aussi par votre présence en
-							ligne ! Pour assurer cette compétitivité, vous avez besoin de
-							visibilité !
+							La compétitivité de votre PME passe aussi par votre présence en
+							ligne ! Pour assurer cette compétitivité, vous avez besoin d’une
+							visibilité professionnelle et performante.
 						</p>
 						<p className='text-3xl font-serif italic'>
 							Nous sommes la pour vous!
@@ -53,12 +103,12 @@ export default async function HomePage({
 								</div>
 
 								<div className='p-4'>
-									<h4 className=''>Site vitrine</h4>
+									<h3 className=''>Site vitrine</h3>
 									<p>
-										Elément essentiel aujourd'hui pour se démarquer et vous
-										faire connaitre auprès de vos futurs clients, un site
-										vitrine est plus que jamais obligatoire pour présenter votre
-										entreprise en ligne.
+										Un site vitrine est essentiel pour présenter votre
+										entreprise et capter l’attention de vos futurs clients. Nous
+										créons des sites élégants, ergonomiques et adaptés à votre
+										image.
 									</p>
 								</div>
 							</div>
@@ -72,29 +122,30 @@ export default async function HomePage({
 								</div>
 
 								<div className='p-4'>
-									<h4>Site internet</h4>
+									<h3>Site internet</h3>
 									<p>
-										Vous avez besoin d'un site complexe pour présenter votre
-										entreprise en long et en large. Présenter vos produits, vos
-										services, vos valeurs, votre équipe, et bien plus encore ?
-										Alors nous sommes votre partenaire de choix.
+										Vous souhaitez un site plus complet pour exposer vos
+										produits, services, valeurs et équipe ? Nous développons des
+										sites internet sur mesure, optimisés pour le SEO et la
+										conversion.
 									</p>
 								</div>
 							</div>
 							<div className='bg-background text-accent w-full'>
 								<div>
 									<img
-										src='/stress.jpg'
+										src='/web-development.webp'
 										alt=''
 										className='w-full  h-80 object-cover'
 									/>
 								</div>
 
 								<div className='p-4'>
-									<h4>Application web</h4>
+									<h3>Application web</h3>
 									<p>
-										Vous avez besoin d'un intranet, d'une application en
-										ligne,... nous sommes là pour vous aider et vous conseiller.
+										Pour un intranet ou une application métier en ligne, nous
+										vous accompagnons de la conception au déploiement, avec un
+										suivi adapté à vos besoins.
 									</p>
 								</div>
 							</div>
@@ -108,14 +159,33 @@ export default async function HomePage({
 								</div>
 
 								<div className='p-4'>
-									<h4>Maintenance et support</h4>
+									<h3>Maintenance et support</h3>
 									<p>
-										Nous assurons un suivi continu pour garantir la pérennité et
-										l'efficacité de vos solutions web.
+										Nous assurons un suivi continu pour garantir la pérennité,
+										la sécurité et la performance de vos solutions web.
 									</p>
 								</div>
 							</div>
 						</div>
+						<p>
+							Nos solutions sont développées en responsive design, compatibles
+							avec tous les appareils, et conçues pour optimiser votre
+							référencement naturel.
+						</p>
+						<p>
+							Découvrez quelques-unes de{' '}
+							<a
+								href='#realisations'
+								className='underline'>
+								nos réalisations{' '}
+							</a>
+							récentes conçues pour répondre aux besoins spécifiques de nos
+							clients.
+						</p>
+						<p>
+							Contactez-nous dès aujourd’hui pour discuter de votre projet et
+							booster votre présence en ligne !
+						</p>
 						<div className=' w-full flex justify-center mt-10'>
 							<Link href={`#contact`}>
 								<Button
@@ -128,7 +198,7 @@ export default async function HomePage({
 				</div>
 				<div
 					className='sticky min-h-screen flex flex-col items-center justify-center text-secondary bg-foreground px-4'
-					id='4'>
+					id='realisations'>
 					<div className='container border-b-[120px] border-foreground space-y-2 xl:px-20'>
 						<h2 className='sticky top-0 border-t-[120px] border-foreground bg-foreground py-5 z-50'>
 							Nos réalisations
@@ -140,6 +210,30 @@ export default async function HomePage({
 						</p>
 
 						<ul className='flex gap-4 max-w-full flex-wrap justify-center'>
+							<li className='w-72 bg-secondary text-foreground'>
+								<div className='relative'>
+									<img
+										src='/creations/wowresto.webp'
+										alt=''
+										className='h-40 object-cover'
+									/>
+									<span className='absolute bottom-0 right-0 bg-secondary p-2 text-sm'>
+										Application web
+									</span>
+								</div>
+								<div className='py-8 px-4 space-y-2'>
+									<p className='text-4xl font-bold mb-2'>WOW Resto</p>
+									<p>
+										L'application web 'WOW Resto' est un site permettant de
+										donner son avis sur les toilettes des restaurants.
+									</p>
+									<a
+										href='https://www.wow-resto.com'
+										className=''>
+										Lien vers le site
+									</a>
+								</div>
+							</li>
 							<li className='w-72 bg-secondary text-foreground'>
 								<div className='relative'>
 									<img
@@ -187,30 +281,6 @@ export default async function HomePage({
 									<a href='https://www.facilitywebxp.be'>Lien vers le site</a>
 								</div>
 							</li>
-							<li className='w-72 bg-secondary text-foreground'>
-								<div className='relative'>
-									<img
-										src='/creations/wowresto.webp'
-										alt=''
-										className='h-40 object-cover'
-									/>
-									<span className='absolute bottom-0 right-0 bg-secondary p-2 text-sm'>
-										Application web
-									</span>
-								</div>
-								<div className='py-8 px-4 space-y-2'>
-									<p className='text-4xl font-bold mb-2'>WOW Resto</p>
-									<p>
-										L'application web 'WOW Resto' est un site permettant de
-										donner son avis sur les toilettes des restaurants.
-									</p>
-									<a
-										href='https://www.wow-resto.com'
-										className=''>
-										Lien vers le site
-									</a>
-								</div>
-							</li>
 						</ul>
 						<div className=' w-full flex justify-center mt-10'>
 							<Link href={`#contact`}>
@@ -223,7 +293,7 @@ export default async function HomePage({
 					</div>
 				</div>
 				<div
-					className='sticky h-screen flex flex-col items-center justify-center text-foreground bg-secondary px-4'
+					className='sticky min-h-screen flex flex-col items-center justify-center text-foreground bg-secondary px-4'
 					id='5'>
 					<div className='container border-b-[120px] border-secondary space-y-2 xl:px-20'>
 						<h2 className='sticky top-0 border-t-[120px] border-secondary bg-secondary py-5'>
@@ -269,14 +339,14 @@ export default async function HomePage({
 							</li>
 						</ul>
 						<p className='font-serif text-4xl mt-10 text-center'></p>
-					</div>
-					<div className=' w-full flex justify-center mt-10'>
-						<Link href={`#contact`}>
-							<Button
-								value={t.contactUsTitle}
-								classname='text-xl'
-							/>
-						</Link>
+						<div className=' w-full flex justify-center mt-10'>
+							<Link href={`#contact`}>
+								<Button
+									value={t.contactUsTitle}
+									classname='text-xl'
+								/>
+							</Link>
+						</div>
 					</div>
 				</div>
 				<Contact

@@ -5,6 +5,44 @@ import { dictionaries, Lang } from '../../../lib/dictionaries';
 import Link from 'next/link';
 import Button from '../../components/Button';
 import DividerHero from '../../components/DividerHero';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+	title: 'Consultance en Facility Management pour PME | FacilityWebXP',
+	description:
+		'Améliorez la performance de votre entreprise grâce à notre expertise en Facility Management : optimisation des coûts, conformité, bien-être, et efficacité durable.',
+	alternates: {
+		canonical: 'https://facilitywebxp.be/fr/facility',
+		languages: {
+			fr: 'https://facilitywebxp.be/fr/facility',
+			'x-default': 'https://facilitywebxp.be/fr/facility'
+		}
+	},
+	openGraph: {
+		title: 'Consultance en Facility Management pour PME | FacilityWebXP',
+		description:
+			'Experts en Facility Management : améliorez vos infrastructures, réduisez vos coûts, augmentez votre efficacité.',
+		url: 'https://facilitywebxp.be/fr/facility',
+		siteName: 'FacilityWebXP',
+		locale: 'fr_FR',
+		type: 'website',
+		images: [
+			{
+				url: 'https://facilitywebxp.be/facility-management.webp',
+				width: 1200,
+				height: 630,
+				alt: 'FacilityWebXP - Facility Management'
+			}
+		]
+	},
+	twitter: {
+		card: 'summary_large_image',
+		title: 'Consultance en Facility Management pour PME | FacilityWebXP',
+		description:
+			'Optimisez vos infrastructures et gagnez en efficacité avec notre accompagnement en Facility Management.',
+		images: ['https://facilitywebxp.be/facility-management.webp']
+	}
+};
 
 export default async function HomePage({
 	params
@@ -20,7 +58,10 @@ export default async function HomePage({
 			<div className='relative'>
 				<div className='sm:sticky sm:top-32 min-h-screen flex flex-col items-center justify-center text-foreground text-center px-4'>
 					<div className='container'>
-						<h1 className=''>Facility Management</h1>
+						{/* <h1 className=''>Facility Management</h1> */}
+						<h1 className='!text-4xl'>
+							Consultance en Facility Management pour une PME plus performante
+						</h1>
 						<p className='mt-2'>{t.facilitySectionLine1}</p>
 						<p className='mt-2 font-serif italic text-2xl'>
 							Le Facility Management est la solution et nous sommes la pour
@@ -116,7 +157,7 @@ export default async function HomePage({
 
 								<div className='p-4'>
 									<h4>
-										Eefficacité des équipes et attractivité de l’entreprise
+										Efficacité des équipes et attractivité de l’entreprise
 									</h4>
 									<p>
 										Dans un contexte de compétition exacerbée et de lutte pour
@@ -238,7 +279,7 @@ export default async function HomePage({
 					</div>
 				</div>
 
-				<div className='sm:sticky sm:top-0 min-h-screen flex flex-col items-center justify-center text-accent bg-background px-4'>
+				<div className='sticky min-h-screen flex flex-col items-center justify-center text-accent bg-background px-4'>
 					<div className='container  border-b-[120px] border-background  space-y-2 xl:px-20'>
 						<h2 className='sticky top-0 border-t-[120px] border-background bg-background py-5'>
 							Pourquoi choisir Facility Web Experience ?
