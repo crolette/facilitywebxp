@@ -63,9 +63,9 @@ export default async function HomePage({
 							Consultance en Facility Management pour une PME plus performante
 						</h1>
 						<p className='mt-2'>{t.facilitySectionLine1}</p>
-						<p className='mt-2 font-serif italic text-2xl'>
-							Le Facility Management est la solution et nous sommes la pour
-							vous!
+						<p className='mt-2 font-serif italic !text-2xl'>
+							Le Facility Management est la solution et nous sommes là pour vous
+							!
 						</p>
 					</div>
 				</div>
@@ -140,7 +140,7 @@ export default async function HomePage({
 								<div className='p-4'>
 									<h4>Bien-être et lutte contre le stress</h4>
 									<p>
-										évaluation des risques professionnels, ergonomie,
+										E valuation des risques professionnels, ergonomie,
 										conciergeries, crèches d’entreprise, restauration, salles de
 										sport, massages...
 									</p>
@@ -182,7 +182,7 @@ export default async function HomePage({
 				</div>
 				<div className='sticky min-h-screen flex flex-col items-center justify-center text-foreground bg-secondary px-4'>
 					<div className='container  border-b-[120px] border-secondary space-y-2 xl:px-20'>
-						<h2 className='sticky top-0 border-t-[120px] border-secondary bg-secondary py-5'>
+						<h2 className='sticky top-0 border-t-[120px] border-secondary bg-secondary py-5 z-50'>
 							Comment pouvons-nous vous aider ?
 						</h2>
 						<p className='mt-2'>
@@ -298,24 +298,35 @@ export default async function HomePage({
 						<h3>Nos atouts</h3>
 						<ul className='space-y-4'>
 							<li className='ml-4'>
-								Nous prenons le temps de comprendre ce qui rend votre entreprise
-								unique
+								Nous prenons le temps de{' '}
+								<span className='highlight'>
+									comprendre ce qui rend votre entreprise unique
+								</span>
 							</li>
 							<li className='ml-8'>
-								Nous travaillons en confiance et en étroite collaboration avec
-								vos équipes pour une intégration parfaite
+								Nous travaillons en <span className='highlight'>confiance</span>{' '}
+								et en <span className='highlight'>étroite collaboration</span>{' '}
+								avec vos équipes pour une intégration parfaite
 							</li>
 							<li className='ml-12'>
-								Notre expertise de terrain et académique nous permet une
-								adaptation permanente aux évolutions du métier
+								Notre expertise de terrain et académique nous permet
+								<span className='highlight'>
+									{' '}
+									une adaptation permanente aux évolutions du métier
+								</span>
 							</li>
 							<li className='ml-16'>
-								L’utilisation de notre solution unique, SME-Facility, pensée par
-								une PME pour les PME
+								<span className='highlight'>
+									L’utilisation de notre solution unique
+								</span>
+								, SME-Facility, pensée par une PME pour les PME
 							</li>
 							<li className='ml-20'>
-								L’intégration naturelle et sans contrainte des objectifs de
-								développement durable dans nos projets
+								L’
+								<span className='highlight'>
+									intégration naturelle et sans contrainte
+								</span>{' '}
+								des objectifs de développement durable dans nos projets
 							</li>
 							<li className='ml-24'>
 								Nous pouvons également développer et optimiser le site web de

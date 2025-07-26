@@ -72,15 +72,15 @@ export default async function HomePage({
 					className='sticky top-0 h-screen flex flex-col items-center justify-center text-center px-4'>
 					<div className='container space-y-10'>
 						<h1 className='!text-4xl'>
-							Création de site internet, site vitrine et application web
+							Création de sites internet, sites vitrine et applications web
 						</h1>
 						<p className=''>
 							La compétitivité de votre PME passe aussi par votre présence en
 							ligne ! Pour assurer cette compétitivité, vous avez besoin d’une
 							visibilité professionnelle et performante.
 						</p>
-						<p className='text-3xl font-serif italic'>
-							Nous sommes la pour vous!
+						<p className='mt-2 font-serif italic !text-2xl'>
+							Nous sommes là pour vous!
 						</p>
 					</div>
 				</div>
@@ -336,6 +336,17 @@ export default async function HomePage({
 								<span className='highlight'>
 									répondre précisément à vos besoins spécifiques
 								</span>
+							</li>
+							<li className='ml-28'>
+								Avec notre consultance en Facility Management, nous pouvons
+								également vous accompagner dans l'analyse, la planification et
+								la supervision des services et des infrastructures de votre
+								entreprise afin d'améliorer son efficacité opérationnelle.
+								<a
+									href={`/${lang}/facility`}
+									className='underline block'>
+									Voir la page Facility Management
+								</a>
 							</li>
 						</ul>
 						<p className='font-serif text-4xl mt-10 text-center'></p>

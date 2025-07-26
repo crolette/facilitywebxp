@@ -80,7 +80,7 @@ p {
 
 .highlight {
 	font-family: 'Bruno ACE', serif;
-	@apply italic text-xl;
+	@apply italic text-lg;
 }
 
 .loader {

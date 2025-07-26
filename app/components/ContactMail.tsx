@@ -18,7 +18,7 @@ export default function Contact({
 			id='contact'>
 			<div className='container p-10 space-y-4'>
 				<h2 className='text-4xl font-bold'>{t.contactTitle}</h2>
-				<p className='text-3xl font-serif font-extralight'>{headlineText}</p>
+				<p className='text-3xl font-extralight'>{headlineText}</p>
 				<p>{t.contactUsText}</p>
 				<a href='mailto:info@facilitywebxp.be'>
 					<Button value={'contact'} />

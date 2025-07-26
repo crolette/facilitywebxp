@@ -20,7 +20,7 @@ export default function Contact({
 				<h2 className='sticky top-0 border-t-[120px] border-background bg-background py-5'>
 					{t.contactTitle}
 				</h2>
-				<p className='text-3xl font-serif font-extralight'>{headlineText}</p>
+				<p className='text-3xl font-extralight'>{headlineText}</p>
 				{/* <p>{t.contactUsText}</p> */}
 				<ContactForm lang={lang} />
 			</div>

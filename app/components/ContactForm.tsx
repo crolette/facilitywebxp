@@ -37,7 +37,7 @@ export default function ContactForm({
 	};
 
 	return (
-		<div className='grid grid-cols-1 md:grid-cols-[2fr_4fr] gap-4'>
+		<div className='grid grid-cols-1 md:grid-cols-[2fr_3fr] lg:grid-cols-[1fr_2fr] gap-4'>
 			<div className=' flex flex-col items-center justify-center p-2 md:p-6 order-2 md:order-1'>
 				<p className='bg-secondary p-6 md:p-10 w-full text-center'>
 					<b>FWebxp SRL</b>
@@ -70,7 +70,7 @@ export default function ContactForm({
 							}
 						/>
 					</div>
-					<div className='grid sm:grid-cols-2 gap-6 sm:gap-4'>
+					<div className='grid sm:grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-6'>
 						<div className=''>
 							<label
 								htmlFor='tel'
