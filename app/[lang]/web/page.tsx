@@ -229,7 +229,7 @@ export default async function HomePage({
 									</p>
 									<a
 										href='https://www.wow-resto.com'
-										className=''>
+										rel='follow'>
 										Lien vers le site
 									</a>
 								</div>
@@ -254,7 +254,9 @@ export default async function HomePage({
 										de coiffure à Theux. Offrant une vitrine parfaite pour
 										Charlotte.
 									</p>
-									<a href='https://www.latelierdecharlotte.be'>
+									<a
+										href='https://www.latelierdecharlotte.be'
+										rel='follow'>
 										Lien vers le site
 									</a>
 								</div>
@@ -278,7 +280,11 @@ export default async function HomePage({
 										Le site internet de "Facility Web Experience" est le site
 										sur lequel vous navigez en ce moment même.
 									</p>
-									<a href='https://www.facilitywebxp.be'>Lien vers le site</a>
+									<a
+										href='https://www.facilitywebxp.be'
+										rel='follow'>
+										Lien vers le site
+									</a>
 								</div>
 							</li>
 						</ul>

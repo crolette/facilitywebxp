@@ -1,0 +1,42 @@
+
+User-agent: *
+Allow: /
+
+# Block Laravel framework directories
+Disallow: /.next/
+Disallow: /app/
+Disallow: /lib/
+Disallow: /tmp/
+Disallow: /node_modules/
+
+# Block Laravel specific files
+Disallow: /package.json
+Disallow: /package-lock.json
+Disallow: /app.js
+Disallow: /tailwind.config.js
+Disallow: /postcss.config.mjs
+Disallow: /.htaccess
+Disallow: /tsconfig.json
+Disallow: /vite.config.js
+Disallow: /.env
+Disallow: /.env.example
+Disallow: /.gitignore
+Disallow: /.gitattributes
+Disallow: /next-env.d.ts
+Disallow: /next.config.ts
+
+# Block common admin areas
+Disallow: /admin/
+Disallow: /login
+Disallow: /dashboard/
+Disallow: /register
+Disallow: /password/
+Disallow: /search
+Disallow: mail.*
+
+# Block specific file types
+Disallow: /*.sql$
+Disallow: /*.log$
+
+# Sitemap location
+Sitemap: https://www.facilitywebxp.com/sitemap.xml
